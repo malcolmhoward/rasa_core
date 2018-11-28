@@ -37,10 +37,15 @@ def create_argument_parser():
         type=str,
         help="nlu model to run")
     parser.add_argument(
+        '-a', '--address',
+        default=constants.DEFAULT_SERVER_ADDRESS,
+        type=str,
+        help="The address at which the server runs")
+    parser.add_argument(
         '-p', '--port',
         default=constants.DEFAULT_SERVER_PORT,
         type=int,
-        help="port to run the server at")
+        help="The port at which the server runs")
     parser.add_argument(
         '--auth_token',
         type=str,
